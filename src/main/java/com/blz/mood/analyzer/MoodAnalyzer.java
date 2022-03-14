@@ -1,7 +1,6 @@
 package com.blz.mood.analyzer;
 
 public class MoodAnalyzer {
-
 	private String message;
 
 	public MoodAnalyzer() {
@@ -12,9 +11,13 @@ public class MoodAnalyzer {
 	}
 
 	public String analyseMood() {
-		if (this.message.contains("Sad"))
-			return "SAD";
-		else
+		try {
+			if (this.message.contains("Sad"))
+				return "SAD";
+			else
+				return "HAPPY";
+		} catch (NullPointerException e) {
 			return "HAPPY";
+		}
 	}
 }
