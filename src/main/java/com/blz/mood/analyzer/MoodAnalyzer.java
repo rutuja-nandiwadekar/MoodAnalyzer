@@ -1,6 +1,7 @@
 package com.blz.mood.analyzer;
 
 public class MoodAnalyzer {
+
 	private String message;
 
 	public MoodAnalyzer() {
