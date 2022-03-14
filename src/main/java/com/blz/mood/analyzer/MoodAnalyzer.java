@@ -1,17 +1,19 @@
 package com.blz.mood.analyzer;
 
 public class MoodAnalyzer {
-	public String analyseMood(String message) {
-		if (message.contains("Sad"))
-			return "SAD";
-		else
-			return "HAPPY";
+	private String message;
+
+	public MoodAnalyzer() {
 	}
 
-	public String analyseMood1(String message) {
-		if (message.contains("Happy"))
-			return "HAPPY";
-		else
+	public MoodAnalyzer(String message) {
+		this.message = message;
+	}
+
+	public String analyseMood() {
+		if (this.message.contains("Sad"))
 			return "SAD";
+		else
+			return "HAPPY";
 	}
 }
